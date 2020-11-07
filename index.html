@@ -100,7 +100,7 @@
 					<li>Modulo 2: Higher Order Functions, Extensions Functions, Lambdas, Coroutines, Koin e mais.</li>
 					<li>Modulo 3 (part 1): Kotlin no Android.</li>
 					<li>Modulo 3 (part 2): Kotlin no Backend - Spring boot + Kotlin.</li>
-					<li>Modulo 4: Aplicacao patrica Android + Spring boot com Kotlin.</li>
+					<li>Modulo 4: Aplicação prática Android + Spring boot com Kotlin.</li>
 				</ul>
 			</section>
 
@@ -125,8 +125,8 @@
 			<section>
 				<h5>Algumas Vantagens:</h5>
 				<ul style="font-size:24px">
-					<li>Linguagem consisa, com pouco código.</li>
-					<li>Segura - não tem váriaveis e constants nulas. Kotlin é null safe por padrão.</li>
+					<li>Linguagem concisa, com pouco código.</li>
+					<li>Segura - não tem variáveis  e constantes nulas. Kotlin é null safe por padrão.</li>
 					<li>Interoperável - Integra muito bom com Java.</li>
 					<li>Ponto e vírgula são opcionais.</li>
 					<li>Sintaxe Limpa e Expressiva.</li>
@@ -160,7 +160,7 @@
 
 			<section>
 				<h5>Olá Mundo.</h5>
-				<p><span style="font-size:32px">Não é necessario criar classe como no JAva e também não precisa ponto e
+				<p><span style="font-size:32px">Não é necessário criar classe como no JAva e também não precisa ponto e
 						virgula</span></samp>
 				<pre style="margin-left:0%">
 	fun main(args: Array<String>){
@@ -173,11 +173,11 @@
 			<section>
 				<section>
 					<h5>Váriaveis.</h5>
-					<p style="font-size:32px">Em Kotlin existe dois tipos de váriaveis</p>
+					<p style="font-size:32px">Em Kotlin existe dois tipos de variáveis</p>
 				</section>
 
 				<section>
-					<h5>Tipo de Variavel mutável.</h5>
+					<h5>Tipo de variáveis (mutável).</h5>
 					<p style="font-size:32px">
 						- Podemos usar sem o tipo: <br />
 						var name = "Joao"<br /><br />
@@ -187,7 +187,7 @@
 				</section>
 
 				<section>
-					<h5>Tipo de váriavel mutável - considerada read-only (referência imutável)</h5>
+					<h5>Tipo de variáveis (mutável) - considerada read-only (referência imutável)</h5>
 					<p style="font-size:30px">val é simular ao final do java ou const do js.</p>
 
 					<p style="font-size:32px">
@@ -201,7 +201,7 @@
 				</section>
 
 				<section>
-					<h5>Inicialização de Váriaveis.</h5>
+					<h5>Inicialização de Variáveis.</h5>
 					<p style="font-size:28px">
 						Em Kotlin declaramos as variáveis informando as palavras reservadas val ou var, o nome da
 						variável, o tipo e o valor.
@@ -459,7 +459,7 @@
 			<section>
 				<h5>
 					functions.</h5>
-				<p style="font-size:30px">Não é necessario tem um classe</p>
+				<p style="font-size:30px">Não é necessário tem um classe</p>
 				<Pre>
 	fun funcaoQualquer(numero: Int): Int {
 	}
@@ -474,8 +474,8 @@
 				<section>
 					<h5>
 						Null Safe.</h5>
-					<p style="font-size:30px">Em kotlin existe um mecanismo de segurança para não apresantar o Famoso
-						NPE. Isso quer dizer que por padráo atritubos não aceita valores nulos, a não ser que forçamos isso.</p>
+					<p style="font-size:30px">Em kotlin existe um mecanismo de segurança para não apresentar o Famoso
+						NPE. Isso quer dizer que por padrão atributos não aceita valores nulos, a não ser que forçamos isso.</p>
 					<pre>
 var str: String = null
 //error: null can not be a value of a non-null type String
@@ -498,7 +498,7 @@ str?.lenght //Verifica se a String é nula -> sempre vai retornar um nulo (null)
 				<section>
 					<h5>
 						Níveis.</h5>
-					<p style="font-size:30px">Podemos checar vãrios niveis</p>
+					<p style="font-size:30px">Podemos checar vários níveis</p>
 					<pre>
 val logradouro = cliente?.empresa?.endereco?.logradouro
 <br />
@@ -510,9 +510,9 @@ println(logradouro)
 					<h5>
 						Null Exception.</h5>
 					<p style="font-size:30px">
-						Em casos que precisamos trata a Exception, poderiamos usa o operado !!.</p>
+						Em casos que precisamos tratar a Exception, poderíamos usa o operador !!.</p>
 					<pre>
-str!!.lenght // Ignora o mecanismo de seguranca do Kotlin para NPE //irá lancar um nullPointException, para ser tratada
+str!!.lenght // Ignora o mecanismo de segurança do Kotlin para NPE //irá lançar um nullPointException, para ser tratada
 			</pre>
 				</section>
 				<section>
