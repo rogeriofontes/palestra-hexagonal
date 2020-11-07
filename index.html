@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>KOTLIN - BÁSICO</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h3>Kotlin - Básico</h3>
+				<img data-src="img/kotlin.png" width="400" height="400">
+				<h4>Bora aprender Kotlin?</h4>
+				<p>
+					<small>Palestrante: <a href="http://rogeriofontes.inf.br" target="_blank">Rogério Fontes</a> / <a
+							href="http://twitter.com/rogeriofontes" target="_blank">@rogeriofontes</a></small>
+				</p>
+			</section>
+
+			<section>
+				<h5>Sobre o palestrante:</h5>
+				<p><span style="font-size:24px">APAIXONADO EM MANEIRAS E FORMAS ÁGEIS DE CRIAR CÓDIGO FONTE.
+						PROGRAMANDO SEMPRE TOMANDO UM BOM CAFÉ E ESCUTANDO UM BELO E PESADO ROCK`N ROLL.
+						TRABALHA A MAIS DE 10 ANOS COM JAVA E LINUX, PASSANDO POR ANDROID, PYTHON, PHP E NODE.JS.
+						PROFESSOR UNIVERSITÁRIO DE REDES DE COMPUTADORES, JAVA E DISPOSITIVOS MÓVEIS.
+						JUGLEADER E CO-FUNDADOR DO UAIJUG (GRUPO DE USUÁRIOS JAVA DO TRIÂNGULO MINEIRO) E DO TRIÂNGULO
+						HACKERSPACE.
+						ENGENHEIRO DE MORDENIZAÇÃO - EVERIS/ITAÚ E APAIXONADO POR ESTUDOS MÚSICAIS. </p>
+			</section>
+
+			<section>
+				<a href="http://www.uaijug.com.br/" target="_blank"><img data-src="img/uaijug-300.png"></a>
+				<a href="http://www.triangulohackerspace.net.br/" target="_blank"><img data-src="img/ths.png"></a>
+			</section>
+
+			<section>
+				<h5>Criação do Kotlin</h5>
+				<p><span style="font-size:24px">
+						Kotlin foi criada pela JetBrains e lancada em 2011 com o objetivo de ser uma linguagem de
+						programação concisa e segura para o desenvolvimento web, mobile e desktop, com um amplo conjunto
+						de ferramentas e IDEs fáceis de utilizar.</span></p>
+				<img data-src="img/jetbrains_logo.png" width="250" height="250">
+			</section>
+
+			<section>
+				<h5>Algumas características:</h5>
+				<ul style="font-size:24px">
+					<li>Roda sobre a JVM.</li>
+					<li>Linguagem é baseada em O.O., mesmo os tipos primitivos.</li>
+					<li>Lancada para jetbrains em 2011.</li>
+					<li>Baseada em 4 linguagens Java, scala, groovy, C#.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h5>Site de Referência para aprender a linguagem:</h5>
+				<a href="https://kotlinlang.org/docs/reference/basic-syntax.html"
+					target="_blank">https://kotlinlang.org/docs/reference/basic-syntax.html</a>
+				<a href="https://developer.android.com/kotlin?hl=pt-br"
+					target="_blank">https://developer.android.com/kotlin?hl=pt-br</a>
+			</section>
+
+			<section>
+				<h5>Próximos modulos:</h5>
+				<ul style="font-size:24px">
+					<li>Modulo 2: Higher Order Functions, Extensions Functions, Lambdas, Coroutines, Koin e mais.</li>
+					<li>Modulo 3 (part 1): Kotlin no Android.</li>
+					<li>Modulo 3 (part 2): Kotlin no Backend - Spring boot + Kotlin.</li>
+					<li>Modulo 4: Aplicacao patrica Android + Spring boot com Kotlin.</li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<h5>Kotlin e o Byte Code.</h5>
+					<p><span style="font-size:32px">O código de um programa de computador escrito na linguagem Java é
+							compilado para uma forma intermediária de código denominada bytecode, que é interpretada
+							pelas Máquinas Virtuais Java (JVMs). E Kotlin gera o mesmo tipo de ByteCode que Java!</span>
+					</p>
+					<a href="http://www.nessauepa.com.br/blog/2013/08/bytecode-java/"
+						target="_blank">http://www.nessauepa.com.br/blog/2013/08/bytecode-java/</a>
+				</section>
+
+				<section>
+					<h5>Kotlin e o Byte Code.</h5>
+					<img data-src="img/bytecode-kotlin.png">
+				</section>
+
+			</section>
+			‍
+			<section>
+				<h5>Algumas Vantagens:</h5>
+				<ul style="font-size:24px">
+					<li>Linguagem consisa, com pouco código.</li>
+					<li>Segura - não tem váriaveis e constants nulas. Kotlin é null safe por padrão.</li>
+					<li>Interoperável - Integra muito bom com Java.</li>
+					<li>Ponto e vírgula são opcionais.</li>
+					<li>Sintaxe Limpa e Expressiva.</li>
+					<li>Chaves "{}" são opcionais nos casos em que não são úteis.</li>
+					<li>Sintaxe Limpa e Expressiva.</li>
+					<li>Getter/Setters são opcionais.</li>
+					<li>Tudo é objeto - primitivos são usados nos bastidores automaticamente, se necessário.</li>
+					<li>Mais consistente e menos verboso - Em algumas situações é possível ter o mesmo comportamento que
+						no Java usando muito menos código, o exemplo abaixo a diferença é bem grande.</li>
+				</ul>
+			</section>
+
+
+			<section>
+				<h5>Algumas desvantagens:</h5>
+				<p><span style="font-size:32px">Existe uma flutuação na Performance de compilação de códigos Kotlin. Em
+						alguns casos, é muito rápido e, em outros casos, é significativamente mais lento.
+					</span></p>
+				<a href="https://youtu.be/te3OU9fxC8U" target="_blank">KotlinConf 2019: What's New in Java 19: The end
+					of Kotlin? by Jake Wharton</a>
+			</section>
+
+
+			<section>
+				<h5>Instalação do Kotlin.</h5>
+				<ul style="font-size:24px">
+					<li>JKD 8+.</li>
+					<li>Intellij IDE.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h5>Olá Mundo.</h5>
+				<p><span style="font-size:32px">Não é necessario criar classe como no JAva e também não precisa ponto e
+						virgula</span></samp>
+				<pre style="margin-left:0%">
+	fun main(args: Array<String>){
+		println("Ola mundo")
+	}
+					</pre>
+				<p><span style="font-size:32px">Para Rodar: Crtl+shitf+F10</span></samp>
+			</section>
+
+			<section>
+				<section>
+					<h5>Váriaveis.</h5>
+					<p style="font-size:32px">Em Kotlin existe dois tipos de váriaveis</p>
+				</section>
+
+				<section>
+					<h5>Tipo de Variavel mutável.</h5>
+					<p style="font-size:32px">
+						- Podemos usar sem o tipo: <br />
+						var name = "Joao"<br /><br />
+
+						- Podemos usar com o tipo:<br />
+						var name: String = "Joao"</p>
+				</section>
+
+				<section>
+					<h5>Tipo de váriavel mutável - considerada read-only (referência imutável)</h5>
+					<p style="font-size:30px">val é simular ao final do java ou const do js.</p>
+
+					<p style="font-size:32px">
+						- Podemos user sem o tipo: <br />
+						val name = "Joao"<br /><br />
+
+						- Podemos usar com o tipo:<br />
+						val name: String = "Joao"<br /><br />
+						<span style="font-size:24px">(nesse caso nao podemos mudar o valor da váriavel<br />// Val
+							cannot be reassigned ) </span><br /><br /></p>
+				</section>
+
+				<section>
+					<h5>Inicialização de Váriaveis.</h5>
+					<p style="font-size:28px">
+						Em Kotlin declaramos as variáveis informando as palavras reservadas val ou var, o nome da
+						variável, o tipo e o valor.
+						Podemos omitir o tipo da variável, assim o tipo é inferido pela atribuição de um valor.
+						Portanto nesse caso é obrigatoriamente necessário inicializar a variável.
+						<br /><br />
+						Se passarmos o tipo, não é necessário inicializar.
+						<br /><br />
+						Exemplo: <br />
+					<pre>
+	val name = "Joao" //Obrigatório inicializar
+								<br />
+	var name: String; //Não Obrigatório inicializar
+							</pre>
+
+					</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h5>Tipos Primitivos em Kotlin</h5>
+				</section>
+				<section>
+					<h5>Tipos Primitivos - Inteiros</h5>
+					<ul style="font-size:24px">
+						<li>Long — 64 bits.</li>
+						<li>Int — 32 bits.</li>
+						<li>Short — 16 bits.</li>
+						<li>Byte — 8 bits.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h5>Tipos Primitivos - Ponto flutuante</h5>
+					<ul style="font-size:24px">
+						<li>Double — 64 bits.</li>
+						<li>Float — 32 bits.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h5>Tipos Primitivos -Exemplos</h5>
+					<ul style="font-size:24px">
+						<li>val exInt = 55.</li>
+						<li>val exLong = 40L.</li>
+						<li>val exFloat = 34.43F</li>
+						<li>val exDouble = 45.78</li>
+						<li>val exHexadecimal = 0x0F</li>
+						<li>val exBinary = 0b010101</li>
+					</ul>
+				</section>
+			</section>
+
+
+
+			<section>
+				<h5>Conversão de tipos</h5>
+				<p style="font-size:28px"><span>
+
+						Cada tipo de número tem funções auxiliares que convertem de um tipo de número para outro:
+						toByte(), toInt(), toLong(), toFloat(), toDouble(), toChar(), toShort().
+						<br />
+						<pre>
+	val exInt = 987
+	val exLong = exInt.toLong()
+					<br />
+	val stringNumber = "101"
+	val intValue = stringNumber.toInt()
+						<br />
+	val intValue = "101".toInt()
+		 
+					</pre>
+
+					</span></p>
+			</section>
+
+
+			<section>
+				<h5>Tipos Booleanos</h5>
+				<ul style="font-size:24px">
+					<li>val extBooleanTrue = true.</li>
+					<li>val extBooleanFalse = false.</li>
+				</ul>
+			</section>
+
+
+			<section>
+				<section>
+					<h5>Strings.</h5>
+					<p style="font-size:30px">Strings podem ser criadas com aspas duplas ou aspas triplas. Além disso,
+						os caracteres de escape podem ser usados com aspas duplas.
+						<br />
+					<pre>
+	val exString = "In hac habitasse platea dictumst."
+	val exStringComScape = "${exString}\n"
+					<br />
+	println("\nÉ exString ${exStringComScape}")
+				   <br />
+	val multipleStringLines = """
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Vestibulum mauris nulla, tempor eget eros quis, 
+		convallis eleifend neque. Quisque nunc lectus, 
+		faucibus vitae tempor ut, rutrum dignissim libero.
+		"""<br />
+			   
+	println("\nCom multiline: ${multipleStringLines}")
+				 </pre>
+
+
+					</p>
+					<p style="font-size:24px"> Obs: Essa feature só saiu no java 14</p>
+				</section>
+
+				<section>
+					<h5>Strings - inserir variáveis e expressões em uma string.</h5>
+					<p style="font-size:30px">
+
+					<pre>
+	//Tipos de interpolação sem aspas
+	val numeroDaConta = 200
+	val mensagem = "Numero da Conta: $numeroDaConta"
+	println("\nMessagem: ${mensagem}")
+	<br />
+	//Você pode executar lógicas dentro de chaves, ao criar uma String literal.
+	val age = 40
+	val outraMensagem = "Parabens: ${if (age > 60) 
+		"Voce pode estacionar nas melhores vagas" 
+		else "Voce nao pode usar vaga de idoso"}"<br />
+	println("\nMessagem: ${outraMensagem}")
+</pre>
+					</p>
+
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<h5>
+						Matrizes (Arrays).</h5>
+					<p style="font-size:30px">Em Kotlin, há duas maneiras principais para criar uma matriz: usando a
+						função auxiliar arrayOf() ou o construtor Array(). E uma coisa importante é que Arrays sempre
+						tem tamanhos fixos.</p>
+				</section>
+				<section>
+					<h5>
+						arrayOf</h5>
+					<pre>
+	val arrayComNumeros = arrayOf(4, 5, 7, 3)
+	print("\n Array com números: " + arrayComNumeros.size)				
+					</pre>
+				</section>
+				<section>
+					<h5>
+						arrayOf com vários tipos</h5>
+					<pre>
+	val arrayComVariosTipos = arrayOf(4, 5, 7, 3, "Chike", false)
+	 print("\n Array com números: " + arrayComVariosTipos.size)
+					</pre>
+				</section>
+				<section>
+					<h5>
+						arrayOf tipado</h5>
+					<pre>
+	//val myArray3 = arrayOf<Int>(4, 5, 7, 3, "Chike", false) // com tipos nao compila
+	//Kotlin: Type mismatch: inferred type is String but Int was expected
+					</pre>
+				</section>
+				<section>
+					<h5>
+						arrayOf tipado</h5>
+					<pre>
+	//val myArray4 = intArrayOf(4, 5, 7, 3, "Chike", false)  // com tipos nao compila
+	//Kotlin: Type mismatch: inferred type is String but Int was expected
+					</pre>
+				</section>
+				<section>
+					<h5>
+						Construtor Array()</h5>
+					<pre>
+	val arrayComConstructor = Array(5, { i -> i * 2 })
+	print("\narray com contrutor: " + arrayComConstructor.size);
+					</pre>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h5>
+						Controles de fluxo.</h5>
+				</section>
+				<section>
+					<h5>
+						If/Else.</h5>
+					<p style="font-size:30px"></p>
+					<Pre>
+	if (expressao) {
+		//codigo
+	} else {
+		//codigo
+	}
+						  <br />
+	val z = if (condicao) x else y
+					</Pre>
+				</section>
+				<section>
+					<h5>
+						when.</h5>
+					<p style="font-size:30px">similar ao swicth do java</p>
+					<Pre>
+	when(condicao) {
+		cond1 -> println("cond1")
+		cond1 -> println("cond1")
+		else -> {
+			println("isso ou")
+			println("isso")
+		}
+	}
+						<br />
+	//podemos jogar o when em uma variavel
+	val result = when (x) {
+		0,1 -> "binario"
+		else -> "erro"
+	}
+						  <br />
+	val z = if (condicao) x else y
+					</Pre>
+				</section>
+				<section>
+					<h5>
+						while.</h5>
+					<p style="font-size:30px"></p>
+					<Pre>
+	var i = 1
+						<br />
+	while (i <= 5) {
+		println("incremento $i")
+		++i
+	}
+						
+					</Pre>
+				</section>
+				<section>
+					<h5>
+						For.</h5>
+					<p style="font-size:30px"></p>
+					<Pre>
+	for (item in colecao) {
+		print(item)
+	}
+					</Pre>
+				</section>
+			</section>
+
+			<section>
+				<h5>
+					functions.</h5>
+				<p style="font-size:30px">Não é necessario tem um classe</p>
+				<Pre>
+	fun funcaoQualquer(numero: Int): Int {
+	}
+				</Pre>
+				<p style="font-size:24px">Por padrão o kotlin retornar Unit, quando não especificar o retorno</p>
+			</section>
+
+			</section>
+
+
+			<section>
+				<section>
+					<h5>
+						Null Safe.</h5>
+					<p style="font-size:30px">Em kotlin existe um mecanismo de segurança para não apresantar o Famoso
+						NPE. Isso quer dizer que por padráo atritubos não aceita valores nulos, a não ser que forçamos isso.</p>
+					<pre>
+var str: String = null
+//error: null can not be a value of a non-null type String
+			</pre>
+				</section>
+				<section>
+					<h5>
+						Operação (?).</h5>
+					<p style="font-size:30px">Quando precisamos de que nosso objeto seja nulo podemos usar o operador
+						(?), ele vai nos dar a opção de nulo (null) de forma segura</p>
+					<pre>
+var str: String = null
+(?) -operador de chamada segura
+<br />			
+var str: String? = null //temos que forçar o nulo
+<br />
+str?.lenght //Verifica se a String é nula -> sempre vai retornar um nulo (null) e não uma Exception
+			</pre>
+				</section>
+				<section>
+					<h5>
+						Níveis.</h5>
+					<p style="font-size:30px">Podemos checar vãrios niveis</p>
+					<pre>
+val logradouro = cliente?.empresa?.endereco?.logradouro
+<br />
+println(logradouro)
+			
+			</pre>
+				</section>
+				<section>
+					<h5>
+						Null Exception.</h5>
+					<p style="font-size:30px">
+						Em casos que precisamos trata a Exception, poderiamos usa o operado !!.</p>
+					<pre>
+str!!.lenght // Ignora o mecanismo de seguranca do Kotlin para NPE //irá lancar um nullPointException, para ser tratada
+			</pre>
+				</section>
+				<section>
+					<h5>
+						Operador Elvis “?:”.</h5>
+					<p style="font-size:30px">
+						Este operador válida se um objeto é nulo e provê uma forma de devolver um valor default.</p>
+					<pre>
+val cliente: Cliente? = null
+val logradouro = cliente?.empresa?.endereco?.logradouro ?: "Av. Joao naves"
+			</pre>
+				</section>
+				<section>
+					<h5>
+						Cast explícito seguro: “as?”.</h5>
+					<p style="font-size:30px">
+						Usamos o operador as para fazer cast de um tipo de dados para outro tipo e caso não seja
+						possível fazer essa operação é lançada uma Exception:.</p>
+					<pre>
+val nome: Any? = null
+val stringValue = nome as String
+// null cannot be cast to non-null type kotlin.String
+<br />			
+Para fazer o cast de forma segura é necessário usar o operador as? para não acontecer a Exception:
+<br />	
+val nome: Any? = null
+val stringValue = nome as? String
+			</pre>
+				</section>
+				<section>
+					<h5>
+						Let</h5>
+					<p style="font-size:30px">
+						Usado para executar um bloco de código a partir de um objeto de forma segura:.</p>
+					<pre>
+val nome:String? = null
+nome.let { 
+	println("nome is $nome")
+}
+// nome is null
+			</pre>
+				</section>
+				<section>
+					<h5>
+						Let</h5>
+					<p style="font-size:30px">
+						Em conjunto com operador de chamada segura podemos definir que o bloco do let apenas seja
+						executado se o objeto não for nulo:.</p>
+					<pre>
+val nome:String? = null
+nome?.let { 
+	println("nome is $nome")
+}
+// nome é nulo, então não executa o println()
+			</pre>
+				</section>
+
+				<section>
+					<h5>
+						lateinit</h5>
+					<p style="font-size:30px">
+						É um modificador que permite que uma propriedade var não nula possa ser inicializada depois de
+						sua declaração.
+						Caso não tenha sido inicializada somos avisados com a mensagem:<br /><br />
+						>>lateinit property name has not been initialized
+						<<<br /><br />
+						Isso ai nos ajudar a precaver um NPE.</p>
+				</section>
+				<section>
+					<h5>
+						lateinit sem Inicialização</h5>
+					<pre>
+lateinit var name: Any
+
+fun main(args: Array<String>) {
+    println(name)
+    // lateinit property name has not been initialized
+}
+			</pre>
+				</section>
+				<section>
+					<h5>
+						lateinit com Inicialização antes de usar</h5>
+					<pre>
+
+lateinit var name: Any
+
+fun main(args: Array<String>) {
+	name = "Joao"
+	println(name)
+	// name
+}
+			</pre>
+				</section>
+
+			</section>
+
+
+			<section>
+				<h5>Aprender Kotlin utilizando Exemplos</h5>
+				<a href="https://play.kotlinlang.org/byExample/overview"
+					target="_blank">https://play.kotlinlang.org/byExample/overview</a>
+			</section>
+
+
+			<section>
+				<img data-src="img/tobecontinued.jfif" width="250" header="200">
+			</section>
+
+			<section>
+				<img data-src="img/thanks.jpg" width="250" header="200">
+			</section>
+
+			<section>
+				<span style="font-size:24px">
+					<a href="https://martinfowler.com/articles/microservices.html" target="_blank">[1] -
+						https://martinfowler.com/articles/microservices.html</a><br />
+					<a href="https://www.redhat.com/pt-br/topics/microservices/what-are-microservices"
+						target="_blank">[2] -
+						https://www.redhat.com/pt-br/topics/microservices/what-are-microservices</a><br />
+
+					<a href="https://quarkus.io/blog/runtime-performance/"
+						target="_blank">https://quarkus.io/blog/runtime-performance/</a><br />
+					<a href="https://quarkus.io/guides/performance-measure"
+						target="_blank">https://quarkus.io/guides/performance-measure</a><br />
+					<a href="https://www.eclipse.org/community/eclipse_newsletter/2019/may/quarkus.php"
+						target="_blank">https://www.eclipse.org/community/eclipse_newsletter/2019/may/quarkus.php</a><br />
+					<a href="https://redhat-developer-demos.github.io/quarkus-tutorial/quarkus-tutorial/index.html"
+						target="_blank">https://redhat-developer-demos.github.io/quarkus-tutorial/quarkus-tutorial/index.html</a><br />
+				</span>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>
